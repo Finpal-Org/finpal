@@ -13,6 +13,21 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
-    "receipt-tracker": "file:"
-  }
+    "@tailwindcss/cli": "^4.0.0",
+    "receipt-tracker": "file:",
+    "tailwindcss": "^4.0.0"
+  },
+  "description": "Receipt tracking app, to store , manage , analyze receipts... with chat ai bot to help",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrufaihi/Receipt-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrufaihi/Receipt-Tracker/issues"
+  },
+  "homepage": "https://github.com/Mrufaihi/Receipt-Tracker#readme"
 }
