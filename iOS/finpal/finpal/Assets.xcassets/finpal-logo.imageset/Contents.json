@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "finpal-logo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
