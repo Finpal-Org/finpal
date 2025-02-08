@@ -1,1 +1,1 @@
-commiting a file
+commit a file
