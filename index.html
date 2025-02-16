@@ -10,10 +10,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     /> -->
+    <link rel="stylesheet" href="/web/src/navbar.css" />
     <link rel="stylesheet" href="/web/src/output.css" />
   </head>
-  <body class="h-full">
-    <div class="flex justify-center items-center h-full">
+  
+  <body>
+    <div class="flex justify-center items-center">
       <button class="p-3 rounded-md bg-slate-500 text-white m-1 w-30">
         <a href="web/src/components/SignUp/signUp.html">Sign Up</a>
       </button>
@@ -21,5 +23,23 @@
         <a href="web/src/components/Login/login.html">Login</a>
       </button>
     </div>
+
+    <div class="wrapper">
+      <div class="sidebar">
+        <h2>Finpal</h2>
+        <h4>*user*</h4>
+
+        <ul>
+          <li><img src="public/assets/nvb-home.png" alt="home icon"><a href="#">Home</a></li>
+          <li><img src="public/assets/nvb-receipt.png" alt="receipts icon"><a href="#">Receipts</a></li>
+          <li><img src="public/assets/nvb-analysis.png" alt="analysis icon"><a href="#">Anayssis</a></li>
+          <li><img src="public/assets/nvb-reports.png" alt="reports icon"><a href="#">Reports</a></li>
+          <li><img src="public/assets/nvb-settings.png" alt="settings icon"><a href="#">Settings</a></li>
+        </ul>
+
+        <footer><h2>Receipt <br> bank</h2></footer>
+      </div>
+
+</div>
   </body>
 </html>
