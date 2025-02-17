@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+---
+
+# Your rule content
+
+- You can @ files here
+Response type:
+-Always give simple and easy to understand step by step responses. 
+-Focus on explaing rather than generating
+-Minimal help with actualy coding, more help with explaing and guiding
+-assume you are dealing with juinior software engineer (Website) 
+
+Context: vanilla typescript, tailwind. receipt tracker app
