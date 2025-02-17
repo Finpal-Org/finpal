@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/web/src/output.css" />
+  </head>
+  <body class="bg-black">
+    <!-- Wrapper -->
+    <!-- Sidebar -->
+    <div class="fixed w-[150px] h-full py-5 bg-green-500" id="navbar">
+      <!-- Header -->
+      <h2 class="text-white uppercase text-center mb-6">Finpal</h2>
+      <h4 class="text-white uppercase text-center mb-5 text-sm" id="userName">
+        <!-- todo put username here from auth  {{displayName}}-->
+        Welcome, Guest
+      </h4>
+
+      <!-- Navigation -->
+      <ul class="flex flex-col gap-6">
+        <li
+          class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
+        >
+          <img
+            src="/public/assets/nvb-home.png"
+            alt="home icon"
+            class="w-5 h-5"
+          />
+          <a href="#">Home</a>
+        </li>
+        <li
+          class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
+        >
+          <img
+            src="/public/assets/nvb-receipt.png"
+            alt="receipts icon"
+            class="w-5 h-5"
+          />
+          <a href="#">Receipts</a>
+        </li>
+        <li
+          class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
+        >
+          <img
+            src="/public/assets/nvb-analysis.png"
+            alt="analysis icon"
+            class="w-5 h-5"
+          />
+          <a href="#">Analysis</a>
+        </li>
+        <li
+          class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
+        >
+          <img
+            src="/public/assets/nvb-reports.png"
+            alt="reports icon"
+            class="w-5 h-5"
+          />
+          <a href="#">Reports</a>
+        </li>
+        <li
+          class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
+        >
+          <img
+            src="/public/assets/nvb-settings.png"
+            alt="settings icon"
+            class="w-5 h-5"
+          />
+          <a href="#">Settings</a>
+        </li>
+      </ul>
+
+      <!-- Footer -->
+      <footer class="flex justify-center items-center">
+        <img src="/public/finpal.png" alt="logo" class="w-20 h-20 mt-4" />
+      </footer>
+    </div>
+  </body>
+  <script defer type="module" src="/web/src/firebase/firebase.ts"></script>
+</html>
