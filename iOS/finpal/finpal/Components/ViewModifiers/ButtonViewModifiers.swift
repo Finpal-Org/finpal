@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct HighlightButtonStyle: ButtonStyle {
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                configuration.isPressed ? Color.accent : Color.clear
+            )
+            .foregroundStyle(configuration.isPressed ? Color.white : Color.accent)
+            .overlay {
+                Capsule()
+                    .fill(configuration.isPressed ? Color.accent : Color.clear)
+            }
+            .clipShape(Capsule())
+            .animation(.smooth, value: configuration.isPressed)
+    }
+}
+
 struct PressableButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
@@ -17,17 +34,20 @@ struct PressableButtonStyle: ButtonStyle {
 }
 
 enum ButtonStyleOption {
-    case press, plain
+    case press, highlight, plain
 }
 
 extension View {
     
     @ViewBuilder
     func anyButton(_ option: ButtonStyleOption = .plain, action: @escaping () -> Void) -> some View {
-        if option == .plain {
-            self.plainButton(action: action)
-        } else {
+        switch option {
+        case .press:
             self.pressableButton(action: action)
+        case .highlight:
+            self.highlightButton(action: action)
+        case .plain:
+            self.plainButton(action: action)
         }
     }
     
@@ -38,6 +58,15 @@ extension View {
             self
         }
         .buttonStyle(PlainButtonStyle())
+    }
+    
+    private func highlightButton(action: @escaping () -> Void) -> some View {
+        Button {
+            action()
+        } label: {
+            self
+        }
+        .buttonStyle(HighlightButtonStyle())
     }
     
     private func pressableButton(action: @escaping () -> Void) -> some View {
@@ -52,19 +81,17 @@ extension View {
 
 #Preview {
     VStack {
-        
-        Text("Hello World")
+        Text("Sign In")
             .callToActionButton()
-            .anyButton(.press, action: {
-                
-            })
-            .padding()
-        
-        Text("Hello World")
-            .callToActionButton()
-            .anyButton {
+            .anyButton(.press) {
                 
             }
-            .padding()
+        
+        Text("Create New Account")
+            .secondaryButton()
+            .anyButton(.plain) {
+                
+            }
+        
     }
 }

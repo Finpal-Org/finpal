@@ -106,11 +106,13 @@ struct OnboardingView: View {
     }
     
     private var signInButton: some View {
-        Text("Sign In")
-            .callToActionButton(true)
-            .anyButton {
-                
-            }
+        NavigationLink {
+            LoginView()
+                .navigationBarBackButtonHidden()
+        } label: {
+            Text("Sign In")
+                .secondaryButton(backgroundColor: Color.clear)
+        }
     }
     
     private func onGetStartedPressed() {

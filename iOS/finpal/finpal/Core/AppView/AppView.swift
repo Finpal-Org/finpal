@@ -20,9 +20,10 @@ struct AppView: View {
             tabBar: {
                 // Is user signed in -> Home Screen
                 // Is user not signed in -> Sign In Screen
+                TabBarView()
             },
             onboarding: {
-                
+                WelcomeView()
             }
         )
         .environment(appState)
