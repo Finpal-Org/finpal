@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="/web/src/global.css" />
     <link rel="stylesheet" href="/web/src/output.css" />
   </head>
-  <body class="h-full">
+  <body class="bg-primary-green h-full">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           class="mx-auto h-20 w-auto"
-          src="/public/finpal.png"
+          src="/assets/finpal.png"
           alt="Your Company"
         />
         <h2
@@ -78,7 +79,7 @@
             class="flex w-full cursor-pointer justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm/6 font-semibold shadow-xs hover:bg-slate-200"
           >
             Continue With Google
-            <img src="/public/google2.png" alt="" class="object-fit px-5" />
+            <img src="/assets/google2.png" alt="" class="object-fit px-5" />
           </button>
         </div>
 
@@ -95,7 +96,7 @@
           <p class="mt-10 w-full text-center text-sm/6 text-gray-500">
             Forgot Password?
             <a
-              href="/web/src/components/Login/forgetPassword.html"
+              href="/web/src/features/authentication/login/forgetPassword.html"
               class="font-semibold text-green-500 hover:text-green-500"
               >Reset Password</a
             >

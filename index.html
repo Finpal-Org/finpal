@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main</title>
+    <title>Finpal Home</title>
     <!-- <link
      Bootstrap
       rel="stylesheet"
@@ -12,129 +12,101 @@
       crossorigin="anonymous"
     /> -->
     <!-- TODO: remove navbar css -->
+    <link rel="stylesheet" href="/web/src/global.css" />
     <link rel="stylesheet" href="/web/src/output.css" />
     <!-- Add these before your other scripts -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script> -->
     <!-- Add other Firebase services you need -->
   </head>
-  <body class="bg-green-300">
-    <div>
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
+  <body class="bg-primary-500">
+    <!-- Wrapper -->
+    <!-- Sidebar -->
+    <div class="fixed h-full w-[150px] bg-green-500 py-5" id="navbar">
+      <!-- Header -->
+      <h1 class="mb-6 text-center font-bold text-white uppercase">Finpal</h1>
+      <h4 class="mb-5 text-center text-sm text-white uppercase" id="userName">
+        <!-- todo put username here from auth  {{displayName}}-->
+        Welcome, Guest
+      </h4>
+
+      <!-- Navigation -->
+      <ul class="flex flex-col gap-6">
+        <li
+          class="flex items-center gap-2.5 border-t border-b border-black/10 border-white/10 p-4 text-white hover:bg-black/30"
+        >
+          <img src="/assets/nvb-home.png" alt="home icon" class="h-5 w-5" />
+          <a href="#">Home</a>
+        </li>
+        <li
+          class="flex items-center gap-2.5 border-t border-b border-black/10 border-white/10 p-4 text-white hover:bg-black/30"
+        >
+          <img
+            src="/assets/nvb-receipt.png"
+            alt="receipts icon"
+            class="h-5 w-5"
           />
-          <title>Navbar</title>
-          <link rel="stylesheet" href="/web/src/output.css" />
-        </head>
-        <body class="bg-black">
-          <!-- Wrapper -->
-          <!-- Sidebar -->
-          <div class="fixed w-[150px] h-full py-5 bg-green-500" id="navbar">
-            <!-- Header -->
-            <h2 class="text-white uppercase text-center mb-6">Finpal</h2>
-            <h4
-              class="text-white uppercase text-center mb-5 text-sm"
-              id="userName"
-            >
-              <!-- todo put username here from auth  {{displayName}}-->
-              Welcome, Guest
-            </h4>
+          <a href="#">Receipts</a>
+        </li>
+        <li
+          class="flex items-center gap-2.5 border-t border-b border-black/10 border-white/10 p-4 text-white hover:bg-black/30"
+        >
+          <img
+            src="/assets/nvb-analysis.png"
+            alt="analysis icon"
+            class="h-5 w-5"
+          />
+          <a href="#">Analysis</a>
+        </li>
+        <li
+          class="flex items-center gap-2.5 border-t border-b border-black/10 border-white/10 p-4 text-white hover:bg-black/30"
+        >
+          <img
+            src="/assets/nvb-reports.png"
+            alt="reports icon"
+            class="h-5 w-5"
+          />
+          <a href="#">Reports</a>
+        </li>
+        <li
+          class="flex items-center gap-2.5 border-t border-b border-black/10 border-white/10 p-4 text-white hover:bg-black/30"
+        >
+          <img
+            src="/assets/nvb-settings.png"
+            alt="settings icon"
+            class="h-5 w-5"
+          />
+          <a href="#">Settings</a>
+        </li>
+      </ul>
 
-            <!-- Navigation -->
-            <ul class="flex flex-col gap-6">
-              <li
-                class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
-              >
-                <img
-                  src="/public/assets/nvb-home.png"
-                  alt="home icon"
-                  class="w-5 h-5"
-                />
-                <a href="#">Home</a>
-              </li>
-              <li
-                class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
-              >
-                <img
-                  src="/public/assets/nvb-receipt.png"
-                  alt="receipts icon"
-                  class="w-5 h-5"
-                />
-                <a href="#">Receipts</a>
-              </li>
-              <li
-                class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
-              >
-                <img
-                  src="/public/assets/nvb-analysis.png"
-                  alt="analysis icon"
-                  class="w-5 h-5"
-                />
-                <a href="#">Analysis</a>
-              </li>
-              <li
-                class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
-              >
-                <img
-                  src="/public/assets/nvb-reports.png"
-                  alt="reports icon"
-                  class="w-5 h-5"
-                />
-                <a href="#">Reports</a>
-              </li>
-              <li
-                class="text-white p-4 border-b border-black/10 border-t border-white/10 flex items-center gap-2.5 hover:bg-black/30"
-              >
-                <img
-                  src="/public/assets/nvb-settings.png"
-                  alt="settings icon"
-                  class="w-5 h-5"
-                />
-                <a href="#">Settings</a>
-              </li>
-            </ul>
-
-            <!-- Footer -->
-            <footer class="flex justify-center items-center">
-              <img src="/public/finpal.png" alt="logo" class="w-20 h-20 mt-4" />
-            </footer>
-          </div>
-        </body>
-        <script
-          defer
-          type="module"
-          src="/web/src/firebase/firebase.ts"
-        ></script>
-      </html>
+      <!-- Footer -->
+      <footer class="flex items-center justify-center">
+        <img src="/assets/finpal.png" alt="logo" class="mt-4 h-20 w-20" />
+      </footer>
     </div>
-    <div>
-      <!-- Navbar Inject Here -->
-      <div id="navbar"></div>
 
+    <!-- Main Content -->
+    <div>
       <!-- Welcome Message -->
-      <div class="flex justify-center items-center gap-4">
+      <div class="flex items-center justify-center gap-4">
         <div
           id="welcomeMessage"
-          class="text-white text-center py-4 text-xl"
+          class="py-4 text-center text-xl text-white"
         ></div>
         <button
           id="signOutButton"
-          class="p-4 rounded-md bg-red-500 text-white hidden"
+          class="hidden rounded-md bg-red-500 p-4 text-white"
         >
           Sign Out
         </button>
       </div>
 
       <!-- Navigation Buttons -->
-      <div class="flex justify-center items-center">
+      <div class="flex items-center justify-center">
         <button
           id="signUpButton"
-          class="p-3 rounded-md bg-slate-500 text-white m-1 w-30"
+          class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white"
         >
           <a href="/web/src/features/authentication/SignUp/signUp.html"
             >Sign Up</a
@@ -142,12 +114,13 @@
         </button>
         <button
           id="loginButton"
-          class="p-3 rounded-md bg-slate-500 text-white m-1 w-30"
+          class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white"
         >
-          <a href="/web/src/features/authentication/Login/login.html"> Login</a>
+          <a href="/web/src/features/authentication/Login/login.html">Login</a>
         </button>
       </div>
     </div>
+
     <script type="module" src="/web/src/firebase/firebase.ts"></script>
   </body>
 </html>
