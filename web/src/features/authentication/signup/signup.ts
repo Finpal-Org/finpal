@@ -1,3 +1,4 @@
+// Validation
 document.addEventListener("DOMContentLoaded", function () {
   const signupForm = document.getElementById("signupForm") as HTMLFormElement;
   const emailInput = document.getElementById("email") as HTMLInputElement;
