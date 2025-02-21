@@ -1,0 +1,35 @@
+/* todo global fonts */
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap");
+
+:root {
+  /* todo change font from google fonts */
+  font-family: "Monomakh", serif;
+  font-weight: 400;
+  font-style: normal;
+  --color-primary-500: #37f84a;
+  /* line-height: 1.5; */
+  /* color: #ffffff; */
+  /* color-scheme: light dark; */
+}
+
+/* TODO: not working  */
+@theme {
+  /* primary color */
+  --color-primary-500: #37f84a;
+
+  /* secondary color */
+  --color-secondary: #a6f8ae;
+
+  /* accent color */
+  --color-accent-400: #f5b743;
+
+  /* Screens */
+}
+
+/* Reusable css components ..leave for now*/
+@components {
+  /* .btn {
+    @apply px-4 py-2 rounded-md ;
+  } */
+}
