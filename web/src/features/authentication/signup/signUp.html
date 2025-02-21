@@ -1,25 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="h-full" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/web/src/global.css" />
     <link rel="stylesheet" href="/web/src/output.css" />
   </head>
-  <body class="h-full bg-green-100">
-    <!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
+  <body class="bg-primary-500 h-full">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           class="mx-auto h-20 w-auto"
-          src="/public/finpal.png"
+          src="/assets/finpal.png"
           alt="Your Company"
         />
         <h2
@@ -42,7 +35,7 @@
                 id="email"
                 autocomplete="email"
                 required
-                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
               />
             </div>
           </div>
@@ -62,7 +55,7 @@
                 id="password"
                 autocomplete="new-password"
                 required
-                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
               />
             </div>
           </div>
@@ -82,17 +75,28 @@
                 id="confirmPassword"
                 autocomplete="new-password"
                 required
-                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
               />
             </div>
           </div>
 
           <div>
+            <!-- TODO: Signup button -->
             <button
               type="submit"
-              class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 cursor-pointer"
+              id="signUpButton"
+              class="flex w-full cursor-pointer justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-500"
             >
               Sign Up
+            </button>
+
+            <button
+              type="submit"
+              id="signOutButton"
+              hidden="true"
+              class="flex hidden w-full cursor-pointer justify-center rounded-md bg-red-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
+            >
+              Sign Out
             </button>
           </div>
         </form>
@@ -101,23 +105,25 @@
 
         <div class="m-5">
           <button
-            class="flex w-full justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm/6 font-semibold shadow-xs hover:bg-slate-200 cursor-pointer"
+            id="signUpWithGoogle"
+            class="flex w-full cursor-pointer justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm/6 font-semibold shadow-xs hover:bg-slate-200"
           >
             Continue With Google
-            <img src="/public/google2.png" alt="" class="px-5 object-fit" />
+            <img src="/assets/google2.png" alt="" class="object-fit px-5" />
           </button>
         </div>
 
         <p class="mt-10 text-center text-sm/6 text-gray-500">
           Already a Member?
           <a
-            href="/web/src/components/Login/login.html"
+            href="/web/src/features/authentication/Login/login.html"
             class="font-semibold text-green-500 hover:text-green-500"
             >Sign In</a
           >
         </p>
       </div>
     </div>
-    <script src="signup.js"></script>
+    <script src="/web/src/features/authentication/signup/signup.ts"></script>
+    <script defer type="module" src="/web/src/firebase/firebase.ts"></script>
   </body>
 </html>
