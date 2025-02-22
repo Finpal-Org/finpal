@@ -13,44 +13,36 @@
     /> -->
     <!-- TODO: remove navbar css -->
     <link rel="stylesheet" href="/web/src/global.css" />
-    <link rel="stylesheet" href="/web/src/output.css" />
-    <!-- Add these before your other scripts -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script> -->
-    <!-- Add other Firebase services you need -->
   </head>
-  <body class="bg-primary-500">
-    <!-- display Sidebar via id "sideBar"-->
-    <div id="sideBar"></div>
+  <body class="">
+    <!--TODO: create clear spaces for sidebar / rest -->
+    <section class="">
+      <!-- display Sidebar via id "sideBar"-->
+      <div id="sideBar"></div>
+      <!-- Main Content -->
 
-    <!-- Main Content -->
-    <div>
-      <!-- Welcome Message -->
-      <div class="flex items-center justify-center gap-4">
-        <div
-          id="welcomeMessage"
-          class="py-4 text-center text-xl text-white"
-        ></div>
-        <button
-          id="signOutButton"
-          class="cursor-pointer rounded-md bg-red-500 p-3 text-white"
-        >
-          Sign Out
-        </button>
-      </div>
-
-      <!-- Navigation Buttons -->
-      <div class="flex items-center justify-center">
-        <button class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white">
-          <a href="/web/src/features/authentication/signup/signUp.html"
-            >Sign Up</a
+      <div>
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-center">
+          <button class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white">
+            <a href="/web/src/features/authentication/signup/signUp.html"
+              >Sign Up</a
+            >
+          </button>
+          <button class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white">
+            <a href="/web/src/features/authentication/login/login.html"
+              >Login</a
+            >
+          </button>
+          <button
+            id="signOutButton"
+            class="m-1 w-30 rounded-md bg-red-500 p-3 text-white"
           >
-        </button>
-        <button class="m-1 w-30 rounded-md bg-slate-500 p-3 text-white">
-          <a href="/web/src/features/authentication/login/login.html">Login</a>
-        </button>
+            Sign Out
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
     <!-- Sidebar -->
     <script type="module" src="/web/src/main.ts"></script>
     <script type="module" src="/web/src/firebase/firebase.ts"></script>
