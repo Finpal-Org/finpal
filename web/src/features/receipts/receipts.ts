@@ -1,4 +1,4 @@
-import { quickStart } from "../../services/docAi";
+import { quickStart } from "../../services/google-doc-ai";
 
 export function receipts() {
   // Create a simple status message element

@@ -1,0 +1,22 @@
+{
+  "merchantName": {
+    "value": "ساكو",
+    "confidence": 0.865
+  },
+  "phone": {
+    "value": "126921333",
+    "confidence": 0.984
+  },
+  "date": {
+    "value": "19.03.19",
+    "confidence": 0.985
+  },
+  "time": {
+    "value": "11:37",
+    "confidence": 0.978
+  },
+  "total": {
+    "value": "55.00",
+    "confidence": 0.959
+  }
+}

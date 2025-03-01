@@ -1,0 +1,11 @@
+{
+  "cors": [
+    {
+      "allowedOrigins": ["*"],
+      "allowedMethods": ["*"],
+      "allowedHeaders": ["*"],
+      "exposedHeaders": ["*"],
+      "maxAgeInSeconds": 3600
+    }
+  ]
+}
